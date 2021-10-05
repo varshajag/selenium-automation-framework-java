@@ -17,5 +17,11 @@ public class LoginTest extends WebBase
 		lp.login(username, password);
 		
 	}
+	@Test(dataProvider="LoginCSVData")
+	public void verifyLoginSuccesfulusingCSV(String username,String password)
+	{
+		LoginPage lp=new LoginPage();
+		lp.login(username, password);
+	}
 		
 }
